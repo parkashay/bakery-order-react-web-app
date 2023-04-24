@@ -1,0 +1,58 @@
+.card {
+    outline: 2px solid var(--colorAccent);
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--colorSecondaryAccent);
+    height: fit-content;
+}
+
+.card-img {
+    min-height: 100px;
+    aspect-ratio: 16/9;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    border: none;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.info {
+    line-height: 2rem;
+    background-color: var(--colorSecondaryAccent);
+    color: var(--colorAccent);
+    padding-inline: 10px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-description {
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.cart-add-remove {
+    line-height: 2rem;
+    background-color: var(--colorAccent);
+    color: var(--colorSecondaryAccent);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.in-cart {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+

@@ -1,0 +1,22 @@
+.signup-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    padding: 30px;
+    gap:2rem;
+}
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    background-color: var(--colorSecondary);
+    max-width: 700px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+}

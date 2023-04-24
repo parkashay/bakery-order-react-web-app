@@ -1,0 +1,47 @@
+.about-container{
+    background-color: var(--colorSecondary);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.ribbon-1, .ribbon-3{
+    background-color: var(--colorSecondaryAccent);
+    min-height: 20vh;
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+.ribbon-2, .ribbon-4{
+    background-color: var(--colorSecondaryAccent);
+    min-height: 20vh;
+    width: 70%;
+    display: flex;
+    margin-left: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.person-name{
+    font-size: 2em;
+    font-weight: 100;
+}
+@media screen and (max-width:660px){
+    .about-container{
+        gap:0;
+        padding: 0;
+    }
+    .ribbon-1, .ribbon-3{
+        width: 100%;
+    }
+    .ribbon-2, .ribbon-4{
+        width: 100%;
+        margin-left: 0;
+    }
+}

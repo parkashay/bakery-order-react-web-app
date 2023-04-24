@@ -1,0 +1,15 @@
+:root{
+  --colorPrimary : #191919;
+  --colorAccent : #ECDBBA;
+  --colorSecondary : #C84B31;
+  --colorSecondaryAccent : #2D4263;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--colorPrimary);
+  color: white;
+}
