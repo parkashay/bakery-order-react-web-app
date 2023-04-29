@@ -8,8 +8,8 @@
 
 
 # to use locally,
-- to run the client, go to client directory and execute command : npm start
-- to run the server, go to server directory and execute command : npm start
+- to run the client, go to client directory, install dependencies using `npm install` and execute command : `npm start`
+- to run the server, go to server directory, install dependencies using `npm install` and execute command : `npm start`
 
 
 # create a .env file inside the client directory and include these variables : 
