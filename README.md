@@ -14,7 +14,7 @@
 
 # create a .env file inside the client directory and include these variables : 
 - REACT_APP_ITEMS_URL = http://localhost:`<client-port>`/items
-- REACT_APP_SERVER_URL = http://localhost:`<server<client-port>`
+- REACT_APP_SERVER_URL = http://localhost:`<serverclient-port>`
 - REACT_APP_CREATE_USER = http://localhost:`<client-port>`/api/createuser
 - REACT_APP_LOGIN_USER = http://localhost:`<client-port>`/api/loginuser
 - REACT_APP_CREATE_ORDER = http://localhost:`<client-port>`/api/createorder
