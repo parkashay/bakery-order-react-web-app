@@ -3,25 +3,27 @@ import Card from './Card'
 import './cards.css'
 
 
-
 function Cards() {
+
+
   const [items, setItems] = useState([
     {
       "name": "loading...",
       "description": "loading...",
-      "price": "9999",
-      "review": "loading..."
+      "price": "9999"
     }
   ])
-  const itemsUrl = 'http://localhost:3001/items'
 
-  const fetchData = async () => {
-    const response = await fetch(itemsUrl);
-    const data = await response.json();
-    setItems(data)
-  }
+
 
   useEffect(() => {
+    const fetchData = async () => {
+      const itemsUrl = process.env.REACT_APP_ITEMS_URL
+      const response = await fetch(itemsUrl);
+      const data = await response.json();
+      setItems(data)
+    }
+
     fetchData()
   }, [])
 

@@ -4,7 +4,7 @@ function About() {
   const people = [  //this is just for the test, for implementation, fetch from mongodb
     { 'name': 'Manish Gurung', 'role': 'Owner', 'contact': 'manish@lol.com' },
     { 'name': 'Monchak Man', 'role': 'Sponser', 'contact': 'monchak@man.com' },
-    { 'name': 'Raj fuckami pun', 'role': 'worker', 'contact': 'chuttar@laura.com' },
+    { 'name': 'Raj fyakami pun', 'role': 'worker', 'contact': 'chuttar@laura.com' },
     { 'name': 'John Cena OP', 'role': 'Manager', 'contact': 'lol@lol.lol' }
   ];
   return (

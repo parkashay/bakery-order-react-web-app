@@ -3,7 +3,7 @@ import './navbar.css'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
-    const [loggedIn, setLoggedIn] = useState(false)
+    const [loggedIn, setLoggedIn] = useState(localStorage.rimhasLoggedIn)
     const [menuToggle, setMenuToggle] = useState(false)
     return (
         <>
@@ -13,6 +13,10 @@ function Navbar() {
                     <div className='nav-links'>
                         <Link to='/' className='nav-link'>Home</Link>
                         <Link to='/about' className='nav-link'>About</Link>
+                       
+                       
+                       
+                       
                         {loggedIn ? <>
                             <button style={
                                 {
@@ -22,10 +26,16 @@ function Navbar() {
                                 }
                             }
                                 onClick={() => {
-                                    setLoggedIn(!loggedIn)
+                                    localStorage.removeItem('rimhasLoggedIn');
+                                    localStorage.removeItem('loggedInName');
+                                    localStorage.removeItem('isAdmin');
+                                    setLoggedIn(localStorage.rimhasLoggedIn)
                                 }}>
-                                Logout</button><span className='profile'>P</span></>
+                                Logout</button><span className='profile'>
+                                    {localStorage.loggedInName[0]}
+                                    </span></>
                             : <Link to='/login' className='nav-link'>Login</Link>}
+                   
                     </div>
                     <div className="mobile-menu-toggle" onClick={() => {
                         setMenuToggle(!menuToggle);
@@ -38,6 +48,8 @@ function Navbar() {
                     </div>
                 </div>
             </nav>
+
+            
             {menuToggle ?
                 <div className='menu-mobile'>
                     <div className='nav-links-mobile'>
@@ -46,16 +58,20 @@ function Navbar() {
                         {loggedIn ?
                             <><button style={{
                                 "backgroundColor": "transparent",
-                                    "outline": "2px solid red",
-                                    "color": "red",
-                                    "width":"fit-content",
-                                    "alignSelf":"center"
+                                "outline": "2px solid red",
+                                "color": "red",
+                                "width": "fit-content",
+                                "alignSelf": "center"
                             }}
-                             onClick={() => {
-                                localStorage.setItem('rimhasLoggedIn', false)
-                                setMenuToggle(!menuToggle)
-                                setLoggedIn(!loggedIn)
-                            }}>Logout</button><span className='profile'>P</span></>
+                                onClick={() => {
+                                    localStorage.removeItem('rimhasLoggedIn');
+                                    localStorage.removeItem('loggedInName');
+                                    localStorage.removeItem('isAdmin');
+                                    setMenuToggle(!menuToggle);
+                                    setLoggedIn(localStorage.rimhasloggedIn)
+                                }}>Logout</button><span className='profile'>
+                                    {localStorage.loggedInName[0]}
+                                </span></>
                             : <Link to='/login' className='nav-link' onClick={() => setMenuToggle(!menuToggle)}>Login</Link>}
                     </div>
                 </div>

@@ -4,7 +4,10 @@
     padding: 5px;
     background-color: var(--colorSecondaryAccent);
     height: fit-content;
+    width: auto;
+    width: 300px;
 }
+
 
 .card-img {
     min-height: 100px;
@@ -54,5 +57,81 @@ button {
     display: flex;
     justify-content: space-between;
     font-weight: 600;
+    flex-wrap: wrap;
 }
 
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    overflow-y: scroll;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    padding: 10px;
+    border: 2px solid var(--colorAccent);
+    width: fit-content;
+    background-color: var(--colorSecondaryAccent);
+    color: var(--colorAccent);
+    font-size: 1.3em;
+    font-weight: 100;
+}
+.payment-info{
+    font-size: .7em;
+    font-weight: normal;
+    background-color: var(--colorAccent);
+    color:rgb(0, 161, 48);
+    padding: 5px;
+}
+
+.close {
+    width: 80px;
+    text-align: center;
+    position: relative;
+    left: 85%;
+    font-size: 4em;
+    z-index:-1;
+    cursor:pointer;
+}
+
+.modal-title {
+    color: var(--colorAccent);
+    text-align: center;
+    font-size: 1.5em;
+    background-color: var(--colorSecondary);
+}
+.order-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+@media screen and (max-width : 650px) {
+    .card {
+        width: 100%;
+        margin-inline: 20px;
+    }
+    .close{
+        left:75%;
+    }
+}

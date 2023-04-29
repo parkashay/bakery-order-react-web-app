@@ -1,18 +1,55 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './signup.css'
 
 function Signup() {
+
+  const routeSignup = process.env.REACT_APP_CREATE_USER;
+  
   const [formData, setFormData] = useState({fullName:"", email:"", password:"", confirmPassword:""})
-  const handleSubmit = (event) => {
+  const [userData, setUserData] = useState({name: "", email: "", password: ""});
+ 
+ 
+ useEffect(() => {
+  setUserData({
+    name : formData.fullName,
+    email: formData.email,
+    password : formData.password
+  })
+ }, [formData])
+
+  //to handle the form data after submit
+  const handleSubmit = async (event) => {
     
     event.preventDefault();
+
     if(formData.password !== formData.confirmPassword){
       alert("passwords do not match")
-      return
+      return;
     }
     else{
-      console.log('do some shit')
+      
+      const response = await fetch(routeSignup, { //send data to backend
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name : userData.name,
+          email : userData.email,
+          password : userData.password
+        })
+      })
+      const data = await response.json();
+      if(!data.success){
+        alert("Email already registered.")
+      }
+      else{
+        localStorage.setItem('rimhasLoggedIn', true)
+        localStorage.setItem('loggedInName', formData.fullName)
+        window.location.href = "/";
+        alert("Welcome to Rimhas, "+ formData.fullName)
+      }
     }
   }
 

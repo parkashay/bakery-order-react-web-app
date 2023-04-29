@@ -1,0 +1,31 @@
+.order{
+    background-color: var(--colorSecondaryAccent);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 10px;
+    border: 2px solid var(--colorAccent);
+    width: 100%;
+    max-width: 700px;
+}
+.customer{
+    color: var(--colorAccent);
+    background-color: var(--colorSecondary);
+    padding: 10px;
+    outline: 2px solid var(--colorAccent);
+}
+.ordered{
+    color: var(--colorAccent);
+    background-color: var(--colorSecondary);
+    padding: 10px;
+    outline: 2px solid var(--colorAccent);
+}
+.status{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './hero.css'
 
 function Hero() {
+
+   
     const heroDesc = ["Home Delivery !", "Taste, beauty and Love",
                        "Payment on Delivery"]
 
