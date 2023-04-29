@@ -21,7 +21,7 @@ technologies used : React, express, mongoose, mongodb.
 
 
 # Also create a .env file inside the server directory and include these variables:
-- REACT_APP_DATABASE_URL = mongodb+srv://prakaaspoudell:I7uaNSfq1Glw5l2Y@cluster0.c0fkjq8.mongodb.net/rimhasBake?retryWrites=true&w=majority
+- REACT_APP_DATABASE_URL = <use your mongodb database link here>
 - REACT_APP_SERVER_PORT = <server-port>
 - REACT_APP_SERVER_URL = http://localhost:<server-port>
 - REACT_APP_CLIENT_URL = http://localhost:<client-port>
