@@ -26,6 +26,6 @@
 # Also create a .env file inside the server directory and include these variables:
 - REACT_APP_DATABASE_URL = `<use your mongodb database link here>`
 - REACT_APP_SERVER_PORT = `<server-port>`
-- REACT_APP_SERVER_URL = http://localhost:`<server-port>`
-- REACT_APP_CLIENT_URL = http://localhost:`<client-port>`
+- REACT_APP_SERVER_URL = http://localhost: `<server-port>`
+- REACT_APP_CLIENT_URL = http://localhost: `<client-port>`
 * use your own port for `<client-port>`. Default is 3000 and use a different port than  `<client-port>` for `<server-port>`
