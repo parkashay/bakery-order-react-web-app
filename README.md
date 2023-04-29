@@ -13,13 +13,13 @@
 
 
 # create a .env file inside the client directory and include these variables : 
-- REACT_APP_ITEMS_URL = http://localhost:`<client-port>`/items
-- REACT_APP_SERVER_URL = http://localhost:`<serverclient-port>`
-- REACT_APP_CREATE_USER = http://localhost:`<client-port>`/api/createuser
-- REACT_APP_LOGIN_USER = http://localhost:`<client-port>`/api/loginuser
-- REACT_APP_CREATE_ORDER = http://localhost:`<client-port>`/api/createorder
-- REACT_APP_GET_ORDERS = http://localhost:`<client-port>`/api/getorders
-- REACT_APP_COMPLETE_ORDER = http://localhost:`<client-port>`/api/completeorder
+- REACT_APP_ITEMS_URL = http://localhost: `<client-port>` /items
+- REACT_APP_SERVER_URL = http://localhost: `<serverclient-port>`
+- REACT_APP_CREATE_USER = http://localhost: `<client-port>` /api/createuser
+- REACT_APP_LOGIN_USER = http://localhost: `<client-port>` /api/loginuser
+- REACT_APP_CREATE_ORDER = http://localhost: `<client-port>` /api/createorder
+- REACT_APP_GET_ORDERS = http://localhost: `<client-port>` /api/getorders
+- REACT_APP_COMPLETE_ORDER = http://localhost: `<client-port>` /api/completeorder
 * use your own port for `<client-port>`. Default is 3000 and use a different port than  `<client-port>` for `<server-port>`
 
 
